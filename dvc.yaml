@@ -1,0 +1,18 @@
+stages:
+  prepare:
+    cmd: python src/data_preprocessing.py
+    deps:
+      - src/data_preprocessing.py
+    outs:
+      - data/iris.csv
+  train:
+    cmd: python -m src.train
+    deps:
+      - src/train.py
+      - src/predict.py
+      - src/data_preprocessing.py
+      - data/iris.csv
+    outs:
+      - models/iris_model.joblib
+    metrics:
+      - metrics.json

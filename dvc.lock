@@ -1,0 +1,42 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: python src/data_preprocessing.py
+    deps:
+    - path: src/data_preprocessing.py
+      hash: md5
+      md5: 57dbd1eacf4847e69cccf7ff63b6a73a
+      size: 985
+    outs:
+    - path: data/iris.csv
+      hash: md5
+      md5: ef1a544b6530eab1a6f683b7174a7a58
+      size: 4316
+  train:
+    cmd: python -m src.train
+    deps:
+    - path: data/iris.csv
+      hash: md5
+      md5: ef1a544b6530eab1a6f683b7174a7a58
+      size: 4316
+    - path: src/data_preprocessing.py
+      hash: md5
+      md5: 57dbd1eacf4847e69cccf7ff63b6a73a
+      size: 985
+    - path: src/predict.py
+      hash: md5
+      md5: 580cdcfb12d98a9a63622733a0634f87
+      size: 673
+    - path: src/train.py
+      hash: md5
+      md5: 1e22f584e845c67fb99d306dd5a4f0e8
+      size: 2314
+    outs:
+    - path: metrics.json
+      hash: md5
+      md5: 2dec60c205c840403f47d5f26edff333
+      size: 123
+    - path: models/iris_model.joblib
+      hash: md5
+      md5: df568bd4885ea8a4ed87c7e2c4743496
+      size: 168033
