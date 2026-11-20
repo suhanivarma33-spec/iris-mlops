@@ -1,4 +1,7 @@
-# Iris Flower Classification using MLOps
+
+# Iris Flower Classification  using MLOps .
+2. Open Terminal > New folder
+open the `Irs-MLOps` folder in VS Code
 
 A beginner-friendly project that classifies Iris flowers into Setosa, Versicolor, or Virginica using a Random Forest model and an MLOps toolchain.
 
@@ -7,8 +10,7 @@ A beginner-friendly project that classifies Iris flowers into Setosa, Versicolor
 - Docker Desktop (optional, for container execution)
 
 ## Setup on Windows (PowerShell)
-1. Extract the ZIP and open the `Iris-MLOps` folder in VS Code.
-2. Open Terminal > New Terminal (PowerShell).
+1. Extract the ZIP a Terminal (PowerShell).
 3. Create and activate a virtual environment:
    ```powershell
    py -3.11 -m venv .venv
@@ -103,3 +105,6 @@ Iris-MLOps/
 ├── Dockerfile
 └── requirements.txt
 ```
+# iris-mlops
+End-to-end Iris MLOps Project
+
